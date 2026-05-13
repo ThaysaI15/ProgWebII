@@ -1,0 +1,149 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.underline-hover:hover {
+  text-decoration: underline;
+}
+
+.a-selected {
+  text-decoration: underline;
+}
+
+.mb-6 {
+  margin-bottom: 5rem;
+}
+
+.hover-brightness {
+  transition: 0.15s;
+}
+
+.hover-brightness:hover {
+  filter: brightness(75%);
+}
+
+.hover-transform {
+  transition: transform 0.3s;
+}
+
+.hover-transform:hover {
+  transform: scale(1.15);
+  
+}
+
+.form-out {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%; 
+  align-items: center; 
+  align-self: center;
+}
+
+.form {
+  border: 1px solid white;
+  background-color: #198754;
+  border-radius: 1rem 0rem 1rem 0rem;
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+
+  box-shadow: 12px 12px rgba(255, 255, 255, 0.05);
+}
+
+
+.form-label {
+  font-size: 15pt;
+  font-weight: bold;
+  margin-bottom: 0px;
+  margin-top: 1rem;
+}
+
+.form-input {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem 0rem 0.5rem 0rem;
+  background-color: #E0E0E0;
+  border: none;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.25);
+  height: 2.5rem;
+}
+
+.form-textarea {
+  min-height: 10rem;
+  margin-bottom: 1rem;
+  background-color: #E0E0E0;
+  border-radius: 0.5rem 0rem 0.5rem 0rem;
+  border: none;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+.form-select {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem 0rem 0.5rem 0rem;
+  background-color: #E0E0E0 !important;
+  border: none;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.25);
+  height: 2.5rem;
+}
+
+.form-select option {
+  background-color: #E0E0E0 !important;
+}
+
+.form-button {
+  margin: 1rem;
+  border-radius: 0.8rem;
+  height: 2.5rem;
+  width: 80%;
+  align-self: center;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.25);
+  transition: filter 0.2s;
+}
+
+.form-button:hover {
+  filter: brightness(90%);
+}
+
+.a-default {
+  color: white;
+
+}
+
+.a-default:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

@@ -1,0 +1,35 @@
+@model List<Biblioteca.Models.Livro>;
+
+<h1 class="fw-bold fst-italic" style="color: white; font-size: 40pt;">Orus Books</h1>
+<p>Bem-vindo à nossa <b>Biblioteca digital</b>. Aqui você pode encontrar sua obra favorita entre nosso extenso catálogo.</p>
+
+<div class="pt-4 pb-4 p-0 container-fluid mb-5 mt-4">
+    <h2 class="text-center mb-4"><b><i>- Top Vendas -</i></b></h2>
+    <div class="row d-flex justify-content-around">
+        @foreach (var livro in Model) 
+        {
+            <div class="col mb-4 d-flex" style="max-width: 550px;">
+                <div class="container-sm border rounded-4 border-3 p-4 bg-success d-flex " style="border-color: white;">
+                    <a asp-controller="Biblioteca" asp-action="Livro" asp-route-id="@livro.Id"><img src="~/images/@livro.ImageName" alt="Cabajo" class="img-thumbnail rounded-4 hover-transform" style="max-height: 400px; object-fit: contain;"></a>
+
+                    <div class="m-3">
+                        <h5 class="fw-bold">@livro.Titulo</h5>
+                        <p>Autor: <span class="fst-italic"><a asp-area="Biblioteca" asp-action="Autor" asp-route-id="@livro.AutorId" class="text-white hover-brightness">@livro.Autor?.Nome</a><span/></p>
+                        <p>Número de páginas: <span class="fst-italic">@livro.NumPaginas<span/></p>
+                        <p>Gênero: <span class="fst-italic">@livro.Genero<span/></p>
+                        <p>Data de publicação: <span class="fst-italic">@livro.DataPublicacao<span/></p>
+                    </div>
+                </div>
+            </div>
+        } 
+    </div>
+</div>
+
+<div class="container-lg border border-success border-3 rounded-4 d-flex mb-6 bg-secondary p-3">
+    <img src="~/images/mulherLendo.jpg" alt="Uma de nossas leitoras" class="img-thumbnail" class="img-thumbnail" style="max-height:300px;">
+    <div class="d-flex flex-column text-center container p-2 m-2">
+        <h1>Sobre nós</h1>
+        <p>Leia o que quiser e como quiser!<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus hic ullam autem suscipit accusantium modi officia aspernatur porro cupiditate, recusandae sequi, harum cumque quia temporibus quidem magni explicabo reprehenderit obcaecati!</p>
+    </div>
+
+</div>
